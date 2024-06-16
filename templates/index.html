@@ -1,6 +1,7 @@
 {% extends "default.html" %}
 
 {% block seo %}
+<meta name="description" content="{{ page.description }}">
 <meta property="og:type" content="website">
 <meta property="og:title" content="{{ config.title }}">
 <meta property="og:url" content="{{ config.base_url | safe }}">
@@ -22,7 +23,7 @@
      {% set img_l = resize_image(path=page.path ~ page.extra.profile_image, width=1000, op="fit_width", format="jpg") %}
       <li class="w-full">
         <a href="{{ page.permalink | safe }}" class="relative block h-32 md:h-48 lg:h-32 group">
-          <img src="{{ img_l.url | safe }}" class="object-cover w-full h-full transition ease-in-out duration-200 delay-75 group-hover:opacity-75">
+          <img src="{{ img_l.url | safe }}" alt="{{ page.title }}" class="object-cover w-full h-full transition ease-in-out duration-200 delay-75 group-hover:opacity-75">
 
           <h3 class="absolute inset-0 flex items-center justify-center w-full px-2 py-1 text-sm font-semibold leading-tight text-center text-white opacity-0 scale-105 bg-black/70 group-hover:opacity-100 transition ease-in-out duration-200 delay-75 group-hover:scale-100 backdrop-blur-md group-hover:brightness-150">
             {{ page.title }}
