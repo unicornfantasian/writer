@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}{{ config.title }}{% endblock %}</title>
+
+  {% block seo %}
+  {% endblock seo %}
+
+  <link rel="stylesheet" href="/css/base.css" />
+</head>
+<body>
+
+  <nav class="px-8 py-4 border-b border-black">
+    <ul class="flex items-center justify-between w-full max-w-6xl mx-auto">
+      <li>
+        <a href="/" class="font-bold tracking-tight text-black hover:opacity-50">{{ config.title }}</a>
+      </li>
+    </ul>
+  </nav>
+
+  <main class="p-4 md:p-8">
+  {% block body %}
+  {% endblock body %}
+  </main>
+
+  <footer class="px-2 py-8 mt-12 md:text-center">
+  <p class="mt-16 text-xs text-gray-500">
+    Writer - unicornfantasian / powered by zola
+  </p>
+  </footer>
+
+</body>
+</html>
+

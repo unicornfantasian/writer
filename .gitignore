@@ -1,0 +1,8 @@
+# Output Directory
+/public/
+
+# Image processing output directory
+/static/processed_images/
+
+# Other
+tailwindcss
